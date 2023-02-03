@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #131313;
+}
+
+nav a{
+
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #AA7639;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
