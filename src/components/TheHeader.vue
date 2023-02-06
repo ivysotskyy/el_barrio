@@ -25,9 +25,9 @@ nav {
   padding: 5px 10px;
 }
 #header {
-  margin-bottom: 2rem;
+  margin: 20px auto;
   position: sticky;
-  width: 100%;
+  width: 80%;
   background-color: rgba(0, 0, 0, 0.5);
   height: 3rem;
   flex-wrap: nowrap;

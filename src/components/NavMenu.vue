@@ -1,46 +1,63 @@
 <script setup>
+import {ref} from "vue";
 
+const isOpen = ref(false);
 
 </script>
 
 <template>
   <div class="nav-container">
-    <input type="checkbox" id="toggle" name="toggle">
-    <ul class="nav-list">
-      <li class="menu-item"><a class="nav-link" href="#a">Home</a></li>
-      <li class="menu-item"><a class="nav-link" href="#b">About</a></li>
-      <li class="menu-item"><a class="nav-link" href="#c">Team</a></li>
-      <li class="menu-item"><a class="nav-link" href="#d">Contact</a></li>
-      <li class="menu-item"><a class="nav-link" href="#e">Twitter</a></li>
-    </ul>
-    <label class="navbar-toggler" for="toggle">
+    <div>
+      <ul class="nav-list" :class="{open: isOpen}">
+        <li class="menu-item"><a class="nav-link" href="#a">Home</a></li>
+        <li class="menu-item"><a class="nav-link" href="#b">About</a></li>
+        <li class="menu-item"><a class="nav-link" href="#c">Team</a></li>
+        <li class="menu-item"><a class="nav-link" href="#d">Contact</a></li>
+        <li class="menu-item"><a class="nav-link" href="#e">Twitter</a></li>
+      </ul>
+    </div>
+    <div @click="isOpen = !isOpen" class="hamburger" :class="{open: isOpen}">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-    </label>
+    </div>
 
   </div>
 </template>
 
 <style scoped>
+
 .nav-list {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 60vw;
+  width: 100vw;
   height: 100%;
-  padding: 50px 0;
-  margin-top: 60px;
-  background-color: #131313;
+  opacity: 0;
+
+  background-color: rgba(17, 17, 17, 0.98);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
+  -webkit-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+  transition: .25s ease-in-out;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
   line-height: 75px;
+  justify-content: center;
+}
+
+.nav-list.open {
+  right: 0;
+  opacity: 100;
+  filter: none;
 }
 
 .menu-item {
+  margin: 0 auto;
+  width: 70%;
   cursor: pointer;
   font-size: 2rem;
   min-height: 3rem;
@@ -53,48 +70,64 @@
   display: block;
   color: #AA7639;
   margin: 15px;
+  text-align: center;
 }
 
 .menu-item:hover {
   background-color: #28546C;
 }
 
-.navbar-toggler {
-  display: grid;
+.hamburger {
+  margin: auto 0;
+  width: 50px;
+  height: 45px;
+  position: relative;
+  align-self: start;
+  display: block;
   cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
-.navbar-toggler .bar {
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  transition: .4s;
+.hamburger .bar {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  display: block;
+  opacity: 1;
+  transition: .25s ease-in-out;
   background-color: #28546C;
+  border-radius: 15px;
 }
 
-#toggle {
-  display: none;
+.hamburger .bar:nth-child(1) {
+  top: 0px;
 }
 
-#toggle:checked ~ .nav-list {
-  right: 0 !important;
+.hamburger .bar:nth-child(2) {
+  top: 15px;
 }
 
-#toggle:checked ~ .navbar-toggler .bar:nth-child(1) {
-  margin: 0;
-  transform: rotate(45deg)
+.hamburger .bar:nth-child(3) {
+  top: 30px;
 }
 
-#toggle:checked ~ .navbar-toggler .bar:nth-child(2) {
-  margin:0;
-  width: min-content;
-  height: min-content;
-  transform: rotate(45deg);
+.hamburger.open span:nth-child(1) {
+  transform: rotate(135deg);
+  top: 10px;
 }
 
-#toggle:checked ~ .navbar-toggler .bar:nth-child(3) {
-  margin:0;
-  transform: rotate(-45deg)
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
 }
+
+.hamburger.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
 </style>
