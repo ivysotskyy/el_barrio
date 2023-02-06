@@ -34,7 +34,6 @@ const isOpen = ref(false);
   width: 100vw;
   height: 100%;
   opacity: 0;
-
   background-color: rgba(17, 17, 17, 0.98);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   -webkit-filter: blur(5px);
@@ -78,10 +77,11 @@ const isOpen = ref(false);
 }
 
 .hamburger {
+  z-index: 1;
+  position: relative;
   margin: auto 0;
   width: 50px;
   height: 45px;
-  position: relative;
   align-self: start;
   display: block;
   cursor: pointer;

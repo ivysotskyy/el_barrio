@@ -39,6 +39,8 @@ export default {
 
 section {
   padding: 0 0.5rem;
+  max-width: 75vw;
+  margin: auto;
 }
 
 #main-logo {
@@ -51,7 +53,6 @@ body {
 }
 
 .hero-container {
-  overflow: hidden;
   background-image: url("./assets/bar-front-dark2.jpg");
   position: center;
   background-repeat: no-repeat;
