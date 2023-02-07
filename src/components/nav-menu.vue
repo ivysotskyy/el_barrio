@@ -9,7 +9,7 @@ const isOpen = ref(false);
   <div class="nav-container">
     <div>
       <ul class="nav-list" :class="{open: isOpen}">
-        <li class="menu-item"><a class="nav-link" href="#a">Home</a></li>
+        <li class="menu-item"><a class="nav-link" href="/">Home</a></li>
         <li class="menu-item"><a class="nav-link" href="#b">About</a></li>
         <li class="menu-item"><a class="nav-link" href="#c">Team</a></li>
         <li class="menu-item"><a class="nav-link" href="#d">Contact</a></li>

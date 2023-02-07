@@ -1,7 +1,5 @@
 <script setup>
-import NavBar from "./NavMenu"
-
-
+import NavBar from "./nav-menu"
 </script>
 
 <template>
