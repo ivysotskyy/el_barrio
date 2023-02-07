@@ -39,7 +39,7 @@ export default {
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
+  url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
 }
 
 section {
@@ -60,7 +60,6 @@ body {
 }
 
 .home-container {
-  overflow: hidden;
   background-image: url("./assets/bar-front-dark2.jpg");
   position: center;
   background-repeat: no-repeat;

@@ -5,6 +5,7 @@ import NavBar from "./nav-menu.vue"
 
 const sticky = ref(false);
 const handleScroll = function (evt, el) {
+
   let y = el.offsetTop
 
   if (y < 50) {
@@ -55,7 +56,7 @@ nav {
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 5px;
-  transition: 0.56s ease-in-out;
+  transition: 0.42s ease-in-out;
 }
 
 .header-logo {
@@ -65,9 +66,9 @@ nav {
 
 .sticky {
   margin-top: 0 !important;
-  width: 100% !important;
+  width: 90% !important;
   background-color: rgba(255, 0, 0, 0) !important;
-  transition: 0.56s ease-in-out;
+  transition: 0.42s ease-in-out;
 }
 
 </style>
