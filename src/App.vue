@@ -44,7 +44,6 @@ export default {
 
 section {
   padding: 0 0.5rem;
-  max-width: 75vw;
   margin: auto;
 }
 
@@ -65,15 +64,19 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   object-fit: fill;
+  width: 100%;
   height: 950px;
+  background-position: center center;
+  
 }
 
 .alcohol-container {
   background-image: url("./assets/second-background.webp");
-  display: flex;
-  flex-flow: row nowrap;
   padding-bottom: 4rem;
-  height: 950px;
   position: center;
+  background-size: cover;
+  width: 100%;
+  height: 950px;
+  background-position: center center;
 }
 </style>
