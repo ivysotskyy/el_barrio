@@ -1,7 +1,7 @@
 <script setup>
 
 import {ref} from 'vue';
-import NavBar from "./nav-menu.vue"
+import NavBar from "./NavMenu.vue"
 
 const sticky = ref(false);
 const handleScroll = function (evt, el) {

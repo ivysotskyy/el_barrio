@@ -4,7 +4,7 @@
 
 <template>
 
-  <section class="container">
+  <article class="hero-container">
     <h1>el barrio</h1>
     <p>
       <span><b>Die nachbarschafts Bar um die Ecke</b></span><br>
@@ -15,7 +15,7 @@
     <a href="/">
       <button class="button" href="/">Button <i class="arrow right"></i></button>
     </a>
-  </section>
+  </article>
 
 </template>
 
@@ -49,7 +49,7 @@
   border-radius: 8px;
 }
 
-.container{
+.hero-container{
   margin: auto;
   padding-top: 1rem;
   padding-bottom: 1.5rem;

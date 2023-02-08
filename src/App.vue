@@ -1,43 +1,49 @@
 <script>
-import TheHeader from './components/header-nav.vue'
-import home from './components/home-page.vue'
-import alcohol from './components/alcohol-page.vue'
+import TheHeader from './components/TheHeader.vue'
+import HeroSection from './components/HeroSection.vue'
+import DrinksSection from './components/DrinksSection.vue'
 import EventsPage from './components/EventsPage.vue'
-import TheFooter from './components/footer-nav.vue'
+import TheFooter from './components/TheFooter.vue'
+import TheOwner from './components/TheOwner.vue'
 
 
 export default {
   name: 'App',
   components: {
     TheHeader,
-    home,
-    alcohol,
+    HeroSection,
+    DrinksSection,
     EventsPage,
-    TheFooter
+    TheFooter,
+    TheOwner
   }
 }
 </script>
 
 <template>
-    <TheHeader/>
   <main>
-    <article class="home-container">
+
+    <section class="home-section">
+      <TheHeader/>
       <img id="main-logo" src="./assets/logo/EL_BARRIO_CIRCLE_BLACKWHITE.png">
-      <section class="hero">
-        <home />
-      </section>
-    </article>
-    <section class="alcohol-container">
-      <alcohol />
+
+      <HeroSection class="hero"/>
+
+      <TheOwner class="owner"/>
+
     </section>
-    <article>
-    </article>
-    <article>
-      <section class="EventsPage">
-        <EventsPage />
-      </section>
-    </article>
-    <TheFooter />
+
+    <section class="drinks-section">
+      <DrinksSection class="drinks"/>
+    </section>
+
+    <section>
+      <article class="events-section">
+        <EventsPage class="events"/>
+      </article>
+    </section>
+
+    <TheFooter/>
   </main>
 </template>
 
@@ -47,41 +53,33 @@ export default {
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
-}
-
-section {
-  padding: 0 0.5rem;
-  margin: auto;
+  url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
 }
 
 #main-logo {
   display: block;
   width: 15rem;
-  margin: auto;
-  margin-bottom: 40px;
+  margin: auto auto 40px;
 }
 
 body {
   margin: 0;
 }
 
-.EventsPage {
+.events {
   background-image: url("./assets/events.webp");
   position: center;
   background-repeat: no-repeat;
-  background-position: center top;
   object-fit: fill;
   width: 100%;
   height: 950px;
   background-position: center center;
 }
 
-.home-container {
+.home-section {
   background-image: url("./assets/home-page-img.webp");
   position: center;
   background-repeat: no-repeat;
-  background-position: center top;
   object-fit: fill;
   width: 100%;
   height: 950px;
@@ -89,17 +87,14 @@ body {
 
 }
 
-.alcohol-container {
+.drinks {
   background-image: url("./assets/second-background.webp");
   padding-bottom: 4rem;
   position: center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   height: 950px;
   background-position: center center;
 }
 
-#app {
-  background-color: black;
-}
 </style>
