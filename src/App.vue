@@ -2,7 +2,9 @@
 import TheHeader from './components/header-nav.vue'
 import home from './components/home-page.vue'
 import alcohol from './components/alcohol-page.vue'
+import GalleryPage from './components/GalleryPage.vue'
 import TheFooter from './components/footer-nav.vue'
+
 
 export default {
   name: 'App',
@@ -10,6 +12,7 @@ export default {
     TheHeader,
     home,
     alcohol,
+    GalleryPage,
     TheFooter
   }
 }
@@ -29,6 +32,11 @@ export default {
     </section>
     <article>
     </article>
+    <article>
+      <section class="GalleryPage">
+        <GalleryPage />
+      </section>
+    </article>
     <TheFooter />
   </main>
 </template>
@@ -39,7 +47,7 @@ export default {
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-  url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
+    url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
 }
 
 section {
@@ -58,8 +66,8 @@ body {
   margin: 0;
 }
 
-.home-container {
-  background-image: url("./assets/bar-front-dark2.jpg");
+.GalleryPage {
+  background-image: url("./assets/gallery-img.webp");
   position: center;
   background-repeat: no-repeat;
   background-position: center top;
@@ -67,7 +75,18 @@ body {
   width: 100%;
   height: 950px;
   background-position: center center;
-  
+}
+
+.home-container {
+  background-image: url("./assets/home-page-img.webp");
+  position: center;
+  background-repeat: no-repeat;
+  background-position: center top;
+  object-fit: fill;
+  width: 100%;
+  height: 950px;
+  background-position: center center;
+
 }
 
 .alcohol-container {

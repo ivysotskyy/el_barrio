@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <div class="foot">
   <footer class="footer">
     <div class="footer__addr">
       <h2>OUR CONTACT INFO</h2>
@@ -43,6 +44,7 @@
 
     </div>
   </footer>
+</div>
 </template>
 
 <style scoped>
@@ -71,6 +73,7 @@ p{
   opacity: 0.6;
 }
 
+
 .img__instagram {
   text-align: center;
   height: 25px;
@@ -91,7 +94,7 @@ p{
 .footer {
   display: flex;
   flex-flow:row wrap;
-  padding: 30px 30px 20px 30px;
+  padding: 30px 30px 20px 50px;
   color: #2f2f2f;
   background-color: #131313;
   text-align: center;
