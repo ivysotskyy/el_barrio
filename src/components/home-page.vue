@@ -53,7 +53,7 @@
   margin: auto;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.8);
   width: 40%;
   text-align: center;
 }

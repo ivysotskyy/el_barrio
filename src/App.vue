@@ -2,7 +2,7 @@
 import TheHeader from './components/header-nav.vue'
 import home from './components/home-page.vue'
 import alcohol from './components/alcohol-page.vue'
-import GalleryPage from './components/GalleryPage.vue'
+import EventsPage from './components/EventsPage.vue'
 import TheFooter from './components/footer-nav.vue'
 
 
@@ -12,16 +12,16 @@ export default {
     TheHeader,
     home,
     alcohol,
-    GalleryPage,
+    EventsPage,
     TheFooter
   }
 }
 </script>
 
 <template>
+    <TheHeader/>
   <main>
     <article class="home-container">
-      <TheHeader />
       <img id="main-logo" src="./assets/logo/EL_BARRIO_CIRCLE_BLACKWHITE.png">
       <section class="hero">
         <home />
@@ -33,8 +33,8 @@ export default {
     <article>
     </article>
     <article>
-      <section class="GalleryPage">
-        <GalleryPage />
+      <section class="EventsPage">
+        <EventsPage />
       </section>
     </article>
     <TheFooter />
@@ -66,8 +66,8 @@ body {
   margin: 0;
 }
 
-.GalleryPage {
-  background-image: url("./assets/gallery-img.webp");
+.EventsPage {
+  background-image: url("./assets/events.webp");
   position: center;
   background-repeat: no-repeat;
   background-position: center top;
@@ -97,5 +97,9 @@ body {
   width: 100%;
   height: 950px;
   background-position: center center;
+}
+
+#app {
+  background-color: black;
 }
 </style>
