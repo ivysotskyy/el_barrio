@@ -3,18 +3,17 @@
 </script>
 
 <template>
-  <article class="owner-container">
+  <article class="owner container">
+
     <div class="img"><img src="../assets/graffiti.jpg" /></div>
+
+    <h2>Unser meister Wirt</h2>
     <p class="text">
-      <span class="h2"><b>Unser meister Wirt</b></span><br>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-      a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
+      a type specimen book.
     </p>
+
   </article>
 
 </template>
@@ -22,33 +21,26 @@
 <style scoped>
 
 img {
-  height: 400px;
+  height: 350px;
 }
 
 .h2 {
   font-size: 25px;
 }
 
-p {
-  margin: 20rem 3em 20rem 1.5em;
-  background-color: black;
-  opacity: 0.87;
-}
-
-
-
-.owner-container {
+.owner {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-
-.container>* {
-  flex: 1 1 200px;
+@media only screen and (min-width: 1090px) {
+  .owner {
+    flex-wrap: nowrap !important;
+  }
 }
 
 </style>

@@ -2,13 +2,15 @@
 import {ref} from "vue";
 
 const isOpen = ref(false);
-
+const preventScroll = function(e) {
+  e.preventDefault();
+}
 </script>
 
 <template>
   <div class="nav-container">
     <div>
-      <ul class="nav-list" :class="{open: isOpen}">
+      <ul class="nav-list" :class="{open: isOpen}" v-scroll="preventScroll">
         <li class="menu-item"><a class="nav-link" href="/">Home</a></li>
         <li class="menu-item"><a class="nav-link" href="#b">About</a></li>
         <li class="menu-item"><a class="nav-link" href="#c">Team</a></li>

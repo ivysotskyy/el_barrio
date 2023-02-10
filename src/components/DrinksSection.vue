@@ -3,15 +3,17 @@
 </script>
 
 <template>
-  <article>
-
+  <article class="drinks container">
+    <h2>Drinks</h2>
   </article>
 
 </template>
 
 <style scoped>
-.drinks-section {
-  height: 800px;
-  background-color: rgba(47, 47, 47, 0.42);
+h2 {
+
+}
+.drinks {
+  height: 500px;
 }
 </style>

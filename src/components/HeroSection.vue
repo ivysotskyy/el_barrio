@@ -4,7 +4,8 @@
 
 <template>
 
-  <article class="hero-container">
+  <article class="hero container">
+
     <h1>el barrio</h1>
     <p>
       <span><b>Die nachbarschafts Bar um die Ecke</b></span><br>
@@ -15,6 +16,7 @@
     <a href="/">
       <button class="button" href="/">Button <i class="arrow right"></i></button>
     </a>
+
   </article>
 
 </template>
@@ -49,21 +51,7 @@
   border-radius: 8px;
 }
 
-.hero-container{
-  margin: auto;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
-  background: rgba(0, 0, 0, 0.8);
-  width: 40%;
-  text-align: center;
-}
 
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 80%;
-    margin: auto;
-  }
-}
 
 .container h1 {
   font-size: 30px;
