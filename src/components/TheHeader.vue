@@ -1,7 +1,7 @@
 <script setup>
 
 import {ref} from 'vue';
-import NavBar from "./nav-menu.vue"
+import NavBar from "./NavMenu.vue"
 
 const sticky = ref(false);
 const handleScroll = function (evt, el) {
@@ -16,25 +16,23 @@ const handleScroll = function (evt, el) {
     sticky.value = true;
   }
 
-  // if(el.offsetTop <= window.scrollY) {
-  //   sticky.value = true;
-  // }else {
-  //   sticky.value = false;
-  // }
-
 }
 
 </script>
 
 <template>
+
   <header id="header" :class="{sticky: sticky}" v-scroll="handleScroll">
+
     <nav>
       <div class="logo-container">
         <a href="/"><img class="header-logo" src="../assets/logo/EL_BARRIO_WHITE.png"></a>
       </div>
       <NavBar/>
     </nav>
+
   </header>
+
 </template>
 
 <style scoped>
@@ -46,6 +44,7 @@ nav {
   align-items: center;
   padding: 5px 10px;
 }
+
 #header {
   position: sticky;
   margin: 20px auto;
@@ -69,6 +68,7 @@ nav {
   width: 90% !important;
   background-color: rgba(255, 0, 0, 0) !important;
   transition: 0.42s ease-in-out;
+
 }
 
 </style>

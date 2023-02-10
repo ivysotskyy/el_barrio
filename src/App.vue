@@ -1,44 +1,57 @@
 <script>
-import TheHeader from './components/header-nav.vue'
-import home from './components/home-page.vue'
-import alcohol from './components/alcohol-page.vue'
+import TheHeader from './components/TheHeader.vue'
+import HeroSection from './components/HeroSection.vue'
+import DrinksSection from './components/DrinksSection.vue'
 import EventsPage from './components/EventsPage.vue'
-import TheFooter from './components/footer-nav.vue'
+import TheFooter from './components/TheFooter.vue'
+import TheOwner from './components/TheOwner.vue'
+import GallerySection from './components/GallerySection'
 
 
 export default {
   name: 'App',
   components: {
     TheHeader,
-    home,
-    alcohol,
+    HeroSection,
+    TheOwner,
+    DrinksSection,
     EventsPage,
-    TheFooter
+    GallerySection,
+    TheFooter,
   }
 }
 </script>
 
 <template>
-  <TheHeader />
-
   <main>
-    <article class="home-container">
+
+    <section class="home section">
+
+      <TheHeader id="header"/>
+
       <img id="main-logo" src="./assets/logo/EL_BARRIO_CIRCLE_BLACKWHITE.png">
-      <section class="hero">
-        <home />
-      </section>
-    </article>
-    <section class="alcohol-container">
-      <alcohol />
+
+      <HeroSection class="hero"/>
+
+      <TheOwner id="owner"/>
+
     </section>
-    <article>
-    </article>
-    <article>
-      <section class="EventsPage">
-        <EventsPage />
-      </section>
-    </article>
-    <TheFooter />
+
+    <section class="drinks section">
+
+      <DrinksSection id="drinks"/>
+
+    </section>
+
+    <section class="events section">
+      <article>
+        <EventsPage id="events"/>
+      </article>
+    </section>
+    <section class="gallery section">
+      <GallerySection id="gallery"/>
+    </section>
+    <TheFooter/>
   </main>
 
 </template>
@@ -49,62 +62,26 @@ export default {
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
+  url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
 }
-
-section {
-  padding: 0 0.5rem;
-  margin: auto;
-}
-
-
-
 
 #main-logo {
   display: block;
   width: 15rem;
-  margin: auto;
-  margin-bottom: 40px;
+  margin: 5.6rem auto;
 }
 
-body {
-  margin: 0;
+.container {
+  padding: 16px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.EventsPage {
-  background-image: url("./assets/events.webp");
-  position: center;
-  background-repeat: no-repeat;
-  background-position: center top;
-  object-fit: fill;
-  width: 100%;
-  height: 950px;
-  background-position: center center;
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
 }
 
-.home-container {
-  background-image: url("./assets/home-page-img.webp");
-  position: center;
-  background-repeat: no-repeat;
-  background-position: center top;
-  object-fit: fill;
-  width: 100%;
-  height: 950px;
-  background-position: center center;
-
-}
-
-.alcohol-container {
-  background-image: url("./assets/second-background.webp");
-  padding-bottom: 4rem;
-  position: center;
-  background-size: cover;
-  width: 100%;
-  height: 950px;
-  background-position: center center;
-}
-
-#app {
-  background-color: black;
-}
 </style>
