@@ -19,7 +19,8 @@ export default {
 </script>
 
 <template>
-    <TheHeader/>
+  <TheHeader />
+
   <main>
     <article class="home-container">
       <img id="main-logo" src="./assets/logo/EL_BARRIO_CIRCLE_BLACKWHITE.png">
@@ -39,6 +40,7 @@ export default {
     </article>
     <TheFooter />
   </main>
+
 </template>
 
 <style>
@@ -54,6 +56,9 @@ section {
   padding: 0 0.5rem;
   margin: auto;
 }
+
+
+
 
 #main-logo {
   display: block;

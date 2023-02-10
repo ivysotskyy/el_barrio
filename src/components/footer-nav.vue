@@ -70,7 +70,6 @@ body {
 
 p{
   font-size: 14px;
-  opacity: 0.6;
 }
 
 
@@ -94,7 +93,7 @@ p{
 .footer {
   display: flex;
   flex-flow:row wrap;
-  padding: 30px 30px 20px 50px;
+  padding: 30px 30px 20px 20px;
   color: #2f2f2f;
   background-color: #131313;
   text-align: center;

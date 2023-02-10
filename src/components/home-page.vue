@@ -15,24 +15,25 @@
     <a href="/">
       <button class="button" href="/">Button <i class="arrow right"></i></button>
     </a>
-  </section>
 
+  </section>
 </template>
 
 <style scoped>
+
 
 .arrow {
   border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  
+
 }
 
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  
+
 }
 
 .button {
@@ -49,7 +50,7 @@
   border-radius: 8px;
 }
 
-.container{
+.container {
   margin: auto;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
@@ -68,5 +69,4 @@
 .container h1 {
   font-size: 30px;
 }
-
 </style>

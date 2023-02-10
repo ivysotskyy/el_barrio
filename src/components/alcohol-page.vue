@@ -40,8 +40,7 @@ p {
   margin: 20rem auto;
   margin-left: 1.5em;
   margin-right: 3em;
-  background-color: black;
-  opacity: 0.87;
+  background: rgba(0,0,0,0.77);
 }
 
 .img {
