@@ -62,7 +62,7 @@ export default {
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-  url(./fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
+  url(fonts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
 }
 
 #main-logo {

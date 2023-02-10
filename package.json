@@ -1,0 +1,8 @@
+{
+  "name": "el_barrio",
+  "version": "1.0.0",
+  "workspaces": [
+    "application",
+    "events-api"
+  ]
+}
