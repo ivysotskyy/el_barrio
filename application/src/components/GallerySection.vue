@@ -3,9 +3,10 @@
 </script>
 
 <template>
-  <reticle class="gallery container">
+  <article class="gallery container">
     <h3>View our gallery</h3>
-  </reticle>
+    
+  </article>
 </template>
 
 <style scoped>

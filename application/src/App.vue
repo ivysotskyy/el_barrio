@@ -8,6 +8,7 @@ import TheOwner from './components/TheOwner.vue'
 import GallerySection from './components/GallerySection'
 
 
+
 export default {
   name: 'App',
   components: {
@@ -53,7 +54,6 @@ export default {
     </section>
     <TheFooter/>
   </main>
-
 </template>
 
 <style>
